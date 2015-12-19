@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Show Title</title>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	
+	<script type="text/javascript">
+		var season = 1; 			// Initial Season
+		var episode = 1; 			// Initial Episode
+		var theater_mode = false; 	// Whether or not theater mode is enabled
+		var video_location = "http://video.location";	// Location of the videos
+		var name = "name"; 		// Name used for source file names
+		var extension = "mp4"; 		// Extension of the file names
+		var title = "Show Title"; 		// Name used for title
+		var width = 640; 			// Width of the player
+		var height = 480; 			// Height of the player
+
+		// Titles of each individual episode
+		var titles = [["S1E1 title", "S2E2 title", "S3E3 title"],["S2E1 title"],["S3E1 title", "S3E2 title"]];
+	</script>
+
+	<script src="./scripts/scripts.js"></script>
+	<link href="./css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<header>
+		<h1 id="title"></h1>
+		<h3 id="episode_name"></h3>
+	</header>
+
+	<video width="" height="" controls id="video">
+		<source src="" type="video/mp4">
+	</video>
+
+	<div class="box">
+		<span id="previous" class="buttons left">&lt;=&nbsp;Previous</span>
+		<span id="mode" class="buttons"></span>
+		<span id="next" class="buttons right">Next&nbsp;=&gt;</span>
+	</div>
+
+	<div class="box">
+		Season:&nbsp;<input type="text" id="season_to" size="2" maxlength="2">&nbsp;&nbsp;Episode:&nbsp;<input type="text" id="episode_to" size="3" maxlength="3">
+		<span id="submit_quick_jump" class="buttons">Jump To</span>
+	</div>
+
+	<div class="box">
+		<span id="available"></span>
+	</div>
+
+	<div class="box">
+		<a href="../"><span class="buttons">Home</span></a>
+	</div>
+</body>
+</html>
